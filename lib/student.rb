@@ -8,7 +8,12 @@ attr_reader :id
   end
 
   def self.create_table(name, grade, id)
-
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS students (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        grade TEXT,
+      )
   end
 
 end
