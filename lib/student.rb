@@ -7,7 +7,7 @@ attr_reader :id
     @id, @name, @grade = id, name, grade
   end
 
-  def method_name
+  def self.create_table(name, grade, id)
 
   end
 
