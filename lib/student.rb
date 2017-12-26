@@ -15,7 +15,7 @@ attr_reader :id
         grade TEXT,
       )
       SQL
-      
+
       DB[:conn].execute(sql)
   end
 
@@ -23,7 +23,7 @@ attr_reader :id
     sql = <<-SQL
     DROP TABLE students
     SQL
-    
+
     DB[:conn].execute(sql)
   end
 
@@ -36,7 +36,7 @@ attr_reader :id
     DB[:conn].execute(sql, self.name, self.grade)
   end
 
-  def self.create
-    
+  def self.create(name:, grade:)
+    Student.new(name, grade)
   end
 end
