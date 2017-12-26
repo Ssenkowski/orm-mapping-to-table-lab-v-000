@@ -14,6 +14,8 @@ attr_reader :id
         name TEXT,
         grade TEXT,
       )
+      SQL
+      DB[:conn].execute(sql)
   end
 
 end
